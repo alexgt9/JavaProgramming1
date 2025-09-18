@@ -1,4 +1,4 @@
-package Tema2;
+package Modulo2;
 
 public class Vehicle {
     String brand;
