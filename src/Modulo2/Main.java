@@ -5,6 +5,27 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        Curso cursoJava = Curso.crear("Curso de Java", "2025");
+        Curso cursoDeMySql = Curso.crear("Curso de MySql", "2025");
+//        Alumno alumnoPaco = new Alumno();
+//
+//        alumnoPaco.nombre = "Paco";
+//        System.out.println(alumnoPaco.nombre);
+
+//        cursoJava.nombre = "Curso de Java";
+//        cursoDeMySql.nombre = "Curso de MySql";
+
+        System.out.println(cursoJava.nombre);
+        System.out.println(cursoDeMySql.nombre);
+
+        Curso.staticNombre = "Curso de Java o no";
+
+        System.out.println(cursoJava.anyo);
+        System.out.println(Curso.ocurrioAntesDeLaPandemia(cursoJava, "2025"));
+        System.out.println(Curso.staticNombre);
+
+        Utils.printAppInfo();
+
         Vehicle vehicle = new Vehicle();
         vehicle.start();
         vehicle.brand = "Toyota";
