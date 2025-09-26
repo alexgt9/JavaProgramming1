@@ -58,5 +58,13 @@ public class Main {
         lista.sort(String::compareTo);
         System.out.println(lista);
         lista.remove(1);
+
+        Banda miBanda = new Banda("Rock");
+        miBanda.nombre = "Juan";
+        miBanda.cantidadIntegrantes = 6;
+
+        System.out.println(miBanda.nombre);
+        System.out.println(miBanda.cantidadIntegrantes);
+        System.out.println(miBanda.getGeneroMusical());
     }
 }
