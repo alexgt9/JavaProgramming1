@@ -37,7 +37,13 @@ public class Curso {
     }
 
     public void agregarAlumno(Alumno alumno) {
-        alumnos.add(alumno);
-        System.out.println("Alumno agregado: " + alumno.nombre);
+        if (alumnos.size() < MAX_ALUMNOS) {
+            if (alumnos.contains(alumno)) {
+                System.out.println("Alumno existe");
+            }
+            this.alumnos.add(alumno);
+        } else {
+            System.out.println("Ya esta lleno");
+        }
     }
 }

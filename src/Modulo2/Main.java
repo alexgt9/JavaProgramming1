@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Brand: " + vehicle.brand);
         Vehicle.brum();
 
-        List<Alumno> alumnos = new ArrayList<>();
+        ArrayList<Alumno> alumnos = new ArrayList<>();
         Alumno alumno1 = new Alumno("Juan", "123456789", "ale");
         alumnos.add(alumno1);
         alumnos.add(new Alumno("Paco", "123456789", "ale"));
@@ -47,7 +47,19 @@ public class Main {
 
         boolean existe = alumnos.stream().anyMatch(a -> a.nombre.equals("Juan"));
         Alumno juan = alumnos.stream().filter(a -> a.nombre.equals("Juan")).findFirst().orElse(null);
-        List<Alumno> alumnosSinJuan = alumnos.stream().filter(alumno -> !alumno.nombre.equals("Juan")).toList();
+//        List<Alumno> alumnosSinJuan = alumnos.stream().filter(alumno -> !alumno.nombre.equals("Juan")).toList();
+        ArrayList<Alumno> sinJuan = new ArrayList<>();
+        for (Alumno alumno : alumnos) {
+            if (!alumno.nombre.equals("Juan")) {
+                sinJuan.add(alumno);
+            }
+        }
+        for (int i = 0; i < alumnos.size(); i++) {
+            if (alumnos.get(i).nombre.equals("Juan")) {
+                alumnos.remove(i);
+                break;
+            }
+        }
 
         List<String> lista = new ArrayList<>();
         lista.add("que");
